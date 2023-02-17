@@ -70,7 +70,7 @@
 ## About The Project
 
 
-A Clone of the recently popular ChatGPT with some improvements in functionality such as being able to go back to previous chats based on your saved session. Using NextAuth and Firebase for Authentication with Google. Full functionality of the capabilties of ChatGPT through the OpenAI API. Obviously subject to the constraints that the API gives.
+A Clone of the recently popular ChatGPT with some improvements in functionality such as being able to choose which ai model you are using. Using NextAuth and Firebase for Authentication with Google. Full functionality of the capabilties of ChatGPT through the OpenAI API. Obviously subject to the constraints that the API gives.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +143,8 @@ These are the things you need to use the software and how to install them.
 
 <!-- ROADMAP -->
 ## Roadmap
-
+- [ ] Finishing Chat Section
+- [ ] Model Picker
 - [ ] Dashboard integration
 - [ ] Multiple layout templates
 - [ ] Prompt library
