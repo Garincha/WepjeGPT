@@ -4,6 +4,7 @@ import Login from "../components/Login";
 import { getServerSession } from "next-auth";
 import "../styles/globals.css";
 import { authOptions } from "../pages/api/auth/[...nextauth]";
+import ClientProvider from "../components/ClientProvider";
 
 export default async function RootLayout({
   children,
@@ -28,7 +29,7 @@ export default async function RootLayout({
                 <SideBar />
               </div>
 
-              {/* ClientProvider - Notification */}
+              <ClientProvider />
 
               <div className="bg-[#00b0ff] flex-1">{children}</div>
             </div>
