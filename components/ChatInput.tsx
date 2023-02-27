@@ -1,6 +1,5 @@
 "use client";
 
-import { async } from "@firebase/util";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
@@ -55,7 +54,7 @@ function ChatInput({ chatId }: Props) {
     // Toast notification to say loading
     const notification = toast.loading("Thinking...");
 
-    await fetch("api/askQuestion", {
+    await fetch("/api/askQuestion", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

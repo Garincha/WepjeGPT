@@ -15,13 +15,13 @@ export default async function handler(
 
   const { prompt, chatId, model, session } = req.body;
 
-  if (!prompt || !chatId || !model || !session) {
+  if (!prompt || !chatId) {
     res.status(400).json({ answer: "Missing parameters" });
     return;
   }
 
 // ChatGT Query
-const response = await query(prompt, chatId, model)
+const response = await query(prompt, chatId, model);
 
 const message: Message = {
   text: response || "WepjeGPT was unable to answer your question. Please try again later",
@@ -30,8 +30,8 @@ const message: Message = {
     _id: "WepjeGPT",
     name: "WepjeGPT",
     avatar: "/../logo.png",
-  }
-}
+  },
+};
 await adminDb.collection("users").doc(session?.user?.email).collection("chats").doc(chatId).collection("messages").add(message);
 
   res.status(200).json({ answer: message.text });
